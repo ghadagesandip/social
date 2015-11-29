@@ -33,7 +33,7 @@ if (isset($accessToken)) {
 //We have access token now, we can call graph api to get user data
 
 $fb->setDefaultAccessToken($accessToken);
-
+//911284755593703
 try {
     $response = $fb->get('/me');
     $userNode = $response->getGraphUser();
@@ -46,5 +46,4 @@ try {
     echo 'Facebook SDK returned an error: ' . $e->getMessage();
     exit;
 }
-var_dump($userNode);exit;
 echo 'Logged in as ' . $userNode->getName();
